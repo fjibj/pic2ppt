@@ -2,6 +2,10 @@
 
 将AI生成的架构图（SVG/PNG格式）转换为PowerPoint中可编辑的形状。
 
+## 界面预览
+
+![pic2ppt 界面截图](screenshot.jpg)
+
 ## 功能特性
 
 - ✅ SVG → PPTX 转换
