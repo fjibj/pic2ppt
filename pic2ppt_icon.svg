@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <defs>
+    <!-- 渐变定义 -->
+    <linearGradient id="gradLeft" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FB923C;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#F97316;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="gradRight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FBBF24;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#F59E0B;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="gradLeftDark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#EA580C;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#C2410C;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="gradRightDark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#D97706;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#B45309;stop-opacity:1" />
+    </linearGradient>
+    <!-- 阴影滤镜 -->
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.15"/>
+    </filter>
+    <!-- 内阴影 -->
+    <filter id="innerShadow">
+      <feOffset dx="0" dy="2"/>
+      <feGaussianBlur stdDeviation="2" result="offset-blur"/>
+      <feComposite operator="out" in="SourceGraphic" in2="offset-blur" result="inverse"/>
+      <feFlood flood-color="black" flood-opacity="0.1" result="color"/>
+      <feComposite operator="in" in="color" in2="inverse" result="shadow"/>
+      <feComposite operator="over" in="shadow" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+
+  <!-- 背景圆角矩形 -->
+  <rect x="8" y="8" width="240" height="240" rx="48" ry="48" fill="#FFFBEB" />
+
+  <!-- 整个图标组，中心旋转5度 -->
+  <g transform="rotate(5, 128, 128)">
+
+    <!-- 左上方块 - 图片输入 -->
+    <rect x="46" y="46" width="74" height="74" rx="16" ry="16"
+          fill="url(#gradLeft)" filter="url(#shadow)" />
+    <!-- 图片图标 -->
+    <g transform="translate(62, 62)">
+      <rect x="4" y="12" width="34" height="26" rx="3" fill="white" fill-opacity="0.9"/>
+      <circle cx="12" cy="22" r="5" fill="url(#gradLeftDark)"/>
+      <path d="M4 32 L14 22 L20 26 L30 16 L38 24 L38 35 L4 35 Z" fill="url(#gradLeftDark)"/>
+    </g>
+
+    <!-- 右上方块 - PPT输出 -->
+    <rect x="136" y="46" width="74" height="74" rx="16" ry="16"
+          fill="url(#gradRight)" filter="url(#shadow)" />
+    <!-- PPT图标 -->
+    <g transform="translate(152, 62)">
+      <rect x="4" y="8" width="34" height="38" rx="3" fill="white" fill-opacity="0.9"/>
+      <rect x="8" y="14" width="26" height="3" rx="1.5" fill="url(#gradRightDark)"/>
+      <rect x="8" y="22" width="20" height="3" rx="1.5" fill="url(#gradRightDark)"/>
+      <rect x="8" y="30" width="24" height="3" rx="1.5" fill="url(#gradRightDark)"/>
+    </g>
+
+    <!-- 左下方块 - 图片输入 -->
+    <rect x="46" y="136" width="74" height="74" rx="16" ry="16"
+          fill="url(#gradLeft)" filter="url(#shadow)" />
+    <!-- 图片图标 -->
+    <g transform="translate(62, 152)">
+      <rect x="4" y="12" width="34" height="26" rx="3" fill="white" fill-opacity="0.9"/>
+      <circle cx="28" cy="20" r="5" fill="url(#gradLeftDark)"/>
+      <path d="M4 32 L12 24 L18 28 L26 20 L38 30 L38 35 L4 35 Z" fill="url(#gradLeftDark)"/>
+    </g>
+
+    <!-- 右下方块 - PPT输出 -->
+    <rect x="136" y="136" width="74" height="74" rx="16" ry="16"
+          fill="url(#gradRight)" filter="url(#shadow)" />
+    <!-- PPT图标 -->
+    <g transform="translate(152, 152)">
+      <rect x="4" y="8" width="34" height="38" rx="3" fill="white" fill-opacity="0.9"/>
+      <rect x="8" y="14" width="26" height="3" rx="1.5" fill="url(#gradRightDark)"/>
+      <rect x="8" y="22" width="18" height="3" rx="1.5" fill="url(#gradRightDark)"/>
+      <rect x="8" y="30" width="22" height="3" rx="1.5" fill="url(#gradRightDark)"/>
+    </g>
+
+    <!-- 中央转换箭头 -->
+    <g transform="translate(128, 128)">
+      <circle cx="0" cy="0" r="20" fill="white" filter="url(#shadow)"/>
+      <path d="M-8 -4 L8 -4 L8 -10 L18 0 L8 10 L8 4 L-8 4 Z" fill="url(#gradRightDark)"/>
+    </g>
+
+  </g>
+
+  <!-- 底部FJ标识 -->
+  <text x="128" y="218" font-family="Arial, sans-serif" font-size="14" font-weight="bold"
+        fill="#92400E" text-anchor="middle" letter-spacing="2">FangJin</text>
+</svg>
