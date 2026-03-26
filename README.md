@@ -6,6 +6,10 @@
 
 ![pic2ppt 界面截图](screenshot.jpg)
 
+## 转换效果
+
+![生成的PPT效果图](output_example.jpg)
+
 ## 功能特性
 
 - ✅ SVG → PPTX 转换
